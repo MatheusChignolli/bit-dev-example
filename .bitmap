@@ -11,7 +11,7 @@
 {
     "dumb/button": {
         "scope": "matheuschignolli.example",
-        "version": "0.0.1",
+        "version": "0.0.2",
         "mainFile": "index.ts",
         "rootDir": "example/dumb/button"
     },
@@ -23,19 +23,19 @@
     },
     "dumb/form/input": {
         "scope": "matheuschignolli.example",
-        "version": "0.0.1",
+        "version": "0.0.2",
         "mainFile": "index.ts",
         "rootDir": "example/dumb/form/input"
     },
     "dumb/typography": {
         "scope": "matheuschignolli.example",
-        "version": "0.0.1",
+        "version": "0.0.2",
         "mainFile": "index.ts",
         "rootDir": "example/dumb/typography"
     },
     "providers/theme": {
         "scope": "matheuschignolli.example",
-        "version": "0.0.1",
+        "version": "0.0.2",
         "mainFile": "index.ts",
         "rootDir": "example/providers/theme"
     },

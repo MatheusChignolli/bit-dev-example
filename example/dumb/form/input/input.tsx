@@ -6,7 +6,7 @@ import {
   FilledInput,
   FormControl
 } from '@material-ui/core';
-import { Theme } from '@matheuschignolli/example.providers.theme'
+import { Typography } from '@matheuschignolli/example.dumb.typography'
 import { InputLabelStyled } from './styles'
 
 const inputs = {
@@ -16,9 +16,14 @@ const inputs = {
 }
 
 export interface InputProps extends MuiInputsProps {
-  variant?: 'standard' | 'outlined' | 'filled'
+  variant?:
+  | 'standard'
+  | 'outlined'
+  | 'filled'
   labelColor?: string
-  children?: ReactNode
+  children?:
+  | string
+  | number
 }
 
 export const Input = ({
@@ -33,27 +38,27 @@ export const Input = ({
   const DefaultInput = inputs[variant]
 
   return (
-    <Theme>
-      <FormControl
+    <FormControl
+      color={color}
+      fullWidth={fullWidth}
+      variant={variant}
+    >
+      {children && <InputLabelStyled
+        color={color}
+        htmlFor={id}
+        variant={variant}
+        labelColor={labelColor}
+      >
+        <Typography variant="button">
+          {children}
+        </Typography>
+      </InputLabelStyled>}
+      <DefaultInput
         color={color}
         fullWidth={fullWidth}
-        variant={variant}
-      >
-        {children && <InputLabelStyled
-          color={color}
-          htmlFor={id}
-          variant={variant}
-          labelColor={labelColor}
-        >
-          {children}
-        </InputLabelStyled>}
-        <DefaultInput
-          color={color}
-          fullWidth={fullWidth}
-          {...props}
-        />
-      </FormControl>
-    </Theme>
+        {...props}
+      />
+    </FormControl>
   );
 }
 

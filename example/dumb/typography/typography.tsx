@@ -1,12 +1,13 @@
-import React, { FC } from 'react';
+import React, { FC } from 'react'
 import { 
   Typography as MuiTypography,
   TypographyProps as MuiTypographyProps
 } from '@material-ui/core'
-import { Theme } from '@matheuschignolli/example.providers.theme'
 
 export interface TypographyProps extends MuiTypographyProps {
-  children: string
+  children:
+  | string
+  | number
   color: 
   |'inherit'
   | 'initial'
@@ -35,12 +36,10 @@ export interface TypographyProps extends MuiTypographyProps {
 
 export const Typography = ({ children, ...props }: TypographyProps) => {
   return (
-    <Theme>
-      <MuiTypography {...props}>
-        {children}
-      </MuiTypography>
-    </Theme>
-  );
+    <MuiTypography {...props}>
+      {children}
+    </MuiTypography>
+  )
 }
 
 Typography.defaultProps = {

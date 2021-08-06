@@ -35,7 +35,7 @@ export const Theme = ({ children, theme }: ThemeProps) => {
   );
 }
 
-Theme.defaultValue = {
+Theme.defaultProps = {
   theme: {
     palette: {
       primary: {

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Theme } from './theme';
+import { Button } from '@matheuschignolli/example.dumb.button';
 
 export const BasicTheme = () => (
-  <Theme>hello from Theme</Theme>
+  <Button>hello from Theme</Button>
 );
